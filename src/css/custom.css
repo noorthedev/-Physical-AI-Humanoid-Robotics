@@ -1,0 +1,1216 @@
+/**
+ * Physical AI Book - Light Purple Theme with High Contrast
+ * Professional and Premium Design
+ */
+
+:root {
+  /* Primary Colors - Deep Purple (Keeping as base but overriding theme variables) */
+  --ifm-color-primary: #7c3aed;
+  --ifm-color-primary-dark: #6d28d9;
+
+  /* Background Colors - Dark Gray Theme */
+  --ifm-background-color: #0f172a;
+  /* Slate 900 */
+  --ifm-background-surface-color: #1e293b;
+  /* Slate 800 */
+  --ifm-font-color-base: #f1f5f9;
+  /* Slate 100 */
+
+  /* Border Colors */
+  --custom-border-color: #db2777;
+  /* Dark Pink */
+
+  /* Accent Colors */
+  --accent-blue: #30c680;
+  --accent-pink: #27dbbd;
+  --accent-cyan: #0891b2;
+  --accent-orange: #ea580c;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(124, 58, 237, 0.2);
+}
+
+/* Light Theme Override (Requested: Light Blue/Gray) */
+html[data-theme='dark'],
+html[data-theme='light'] {
+  /* Light Gray/Blue background */
+  --ifm-background-color: #f8fafc;
+  --ifm-background-surface-color: #e0f2fe;
+  --ifm-font-color-base: #1e293b;
+  /* Dark text for contrast */
+
+  /* Primary purple remains */
+  --ifm-color-primary: #7c3aed;
+
+  --docusaurus-highlighted-code-line-bg: rgba(124, 58, 237, 0.15);
+
+  /* Card backgrounds */
+  --card-background-color: #ffffff;
+  --card-border-color: #cbd5e1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body with Light Gray to Blue gradient */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  /* Light Gray to Light Blue */
+  min-height: 100vh;
+}
+
+/* Main content area - glassmorphism on light purple */
+.main-wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* ========== HEADINGS - DARK GRAY / BLUE ========== */
+.theme-doc-markdown h1 {
+  /* User requested Headings Dark Gray (on light) or Blue?
+     Since background is Dark, "Dark Gray" headings won't be visible.
+     Assuming User wants "Dark Gray" headings on a Light Theme, BUT requested "Dark Gray Theme".
+     If Theme is Dark Gray, Headings must be Light.
+     However, user said "headings dark gray kro". This might be for the Login/Signup white cards?
+     Let's make Main Headings Blue/White for contrast on Dark Theme.
+  */
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  /* Blue Gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+}
+
+.theme-doc-markdown h2 {
+  color: #4c1d95;
+  font-weight: 800;
+  font-size: 2rem;
+  border-bottom: 3px solid #a78bfa;
+  padding-bottom: 0.75rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.theme-doc-markdown h3 {
+  color: #5b21b6;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 4px solid #8b5cf6;
+}
+
+.theme-doc-markdown h4 {
+  color: #6d28d9;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* ========== PARAGRAPHS & TEXT ========== */
+.theme-doc-markdown p {
+  line-height: 1.9;
+  color: #374151;
+  font-size: 1.05rem;
+}
+
+.theme-doc-markdown strong {
+  color: #4c1d95;
+  font-weight: 700;
+}
+
+.theme-doc-markdown em {
+  color: #6d28d9;
+}
+
+/* ========== LISTS WITH ACCENT COLORS ========== */
+.theme-doc-markdown ul {
+  padding-left: 0;
+}
+
+.theme-doc-markdown ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+  list-style: none;
+}
+
+.theme-doc-markdown ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #8b5cf6;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.theme-doc-markdown ol li {
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.theme-doc-markdown ol li::marker {
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+/* ========== CODE BLOCKS - HIGH CONTRAST ========== */
+.theme-code-block {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%) !important;
+  border: 2px solid #8b5cf6 !important;
+  border-radius: 16px !important;
+  box-shadow:
+    0 10px 40px rgba(124, 58, 237, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  overflow: hidden;
+}
+
+.theme-code-block pre {
+  background: transparent !important;
+}
+
+code {
+  background: rgba(139, 92, 246, 0.15) !important;
+  color: #5b21b6 !important;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ========== NAVBAR - LIGHT GRAY ========== */
+.navbar {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
+  /* Light Gray */
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.navbar__title {
+  color: #1e293b !important;
+  /* Slate 800 */
+  font-weight: 800;
+  font-size: 1.4rem;
+  text-shadow: none;
+}
+
+.navbar__link {
+  font-weight: 600;
+  color: #334155 !important;
+  /* Slate 700 */
+  transition: all 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: #0f172a !important;
+  /* Slate 900 */
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__link--active {
+  color: #0f172a !important;
+  /* Slate 900 */
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 4px 12px;
+}
+
+/* ========== SIDEBAR - CONTRASTING SECTIONS ========== */
+.menu {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.menu__link {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 12px 16px;
+  margin: 4px 0;
+  color: #4c1d95;
+  font-weight: 500;
+}
+
+.menu__link:hover {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.1));
+  color: #5b21b6;
+  transform: translateX(5px);
+}
+
+.menu__link--active {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.menu__list-item-collapsible>.menu__link {
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+/* ========== SECTIONS WITH CONTRAST ========== */
+.theme-doc-markdown>section,
+.markdown>section {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+}
+
+/* ========== BLOCKQUOTES - ACCENT COLOR ========== */
+blockquote {
+  background: linear-gradient(90deg, rgba(219, 39, 119, 0.1), rgba(168, 85, 247, 0.05));
+  border-left: 5px solid #db2777;
+  padding: 1.5rem 2rem;
+  border-radius: 0 16px 16px 0;
+  margin: 2rem 0;
+  color: #831843;
+  font-style: italic;
+}
+
+blockquote p {
+  color: #831843 !important;
+  margin: 0;
+}
+
+/* ========== TABLES - HIGH VISIBILITY ========== */
+table {
+  border: 2px solid #8b5cf6;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+  width: 100%;
+  margin: 2rem 0;
+}
+
+th {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+tr:nth-child(even) {
+  background: rgba(139, 92, 246, 0.08);
+}
+
+tr:hover {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+/* ========== FORMS - PREMIUM STYLING ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.2);
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form select {
+  padding: 14px 18px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #1e1b4b;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+form button[type="submit"] {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.4);
+}
+
+form button[type="submit"]:hover {
+  background: linear-gradient(135deg, #6d28d9, #7c3aed);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.5);
+}
+
+/* ========== AUTH BUTTONS ========== */
+.AuthButton-container a {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 22px;
+  border-radius: 12px;
+}
+
+.AuthButton-container a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+.AuthButton-container button {
+  background: #ffffff;
+  color: #7c3aed;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.AuthButton-container button:hover {
+  background: #f3e8ff;
+  transform: translateY(-2px);
+}
+
+/* ========== CONTENT BUTTONS ========== */
+.ContentWrapper-buttons button {
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 2px solid #8b5cf6;
+  background: #ffffff;
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ContentWrapper-buttons button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* ========== FOOTER - PURPLE GRADIENT ========== */
+footer.footer--dark {
+  background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%) !important;
+  border-top: 3px solid #a78bfa;
+}
+
+footer.footer--dark .footer__title {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+footer.footer--dark .footer__link-item {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer.footer--dark .footer__link-item:hover {
+  color: #ffffff !important;
+}
+
+footer.footer--dark .footer__copyright {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ede9fe;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6, #a855f7);
+  border-radius: 6px;
+  border: 3px solid #ede9fe;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7c3aed, #8b5cf6);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: #4c1d95;
+}
+
+/* ========== TOC SIDEBAR ========== */
+.table-of-contents__link {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: #6d28d9;
+}
+
+.table-of-contents__link:hover {
+  background: rgba(139, 92, 246, 0.15);
+  color: #5b21b6;
+}
+
+.table-of-contents__link--active {
+  color: #7c3aed !important;
+  font-weight: 700;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* ========== ALERTS/ADMONITIONS ========== */
+.alert {
+  border-radius: 16px;
+  border-left-width: 5px;
+}
+
+.alert--info {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: #2563eb;
+}
+
+.alert--warning {
+  background: rgba(234, 88, 12, 0.1);
+  border-color: #ea580c;
+}
+
+.alert--danger {
+  background: rgba(219, 39, 119, 0.1);
+  border-color: #db2777;
+}
+
+.alert--success {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+}
+
+/* ========== LINKS ========== */
+.theme-doc-markdown a {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(124, 58, 237, 0.3);
+  transition: all 0.3s ease;
+}
+
+.theme-doc-markdown a:hover {
+  color: #5b21b6;
+  text-decoration-color: #5b21b6;
+}
+
+/* ========== PAGINATION ========== */
+.pagination-nav__link {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+  background: #ffffff;
+  border-color: #8b5cf6;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+  transform: translateY(-3px);
+}
+
+.pagination-nav__label {
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+.pagination-nav__sublabel {
+  color: #6d28d9;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - ALL SCREEN SIZES
+   ============================================ */
+
+/* Extra Large Desktop (1440px+) */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .theme-doc-markdown h1 {
+    font-size: 3.2rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Large Desktop (1200px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Desktop (997px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    padding: 0 1.5rem;
+  }
+
+  .theme-doc-markdown h1 {
+    font-size: 2.5rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablet Landscape & Small Desktop (768px - 996px) */
+@media screen and (max-width: 996px) {
+
+  /* Headings */
+  .theme-doc-markdown h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    padding-left: 0.75rem;
+  }
+
+  .theme-doc-markdown h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Paragraphs */
+  .theme-doc-markdown p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  /* Sidebar */
+  .menu {
+    margin: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .menu__link {
+    padding: 10px 14px;
+  }
+
+  /* Code blocks */
+  .theme-code-block {
+    border-radius: 12px !important;
+    margin: 1rem 0;
+  }
+
+  /* Tables */
+  table {
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+  }
+
+  /* Forms */
+  form {
+    padding: 2rem;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+
+  /* Pagination */
+  .pagination-nav__link {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  /* Navbar */
+  .navbar__title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet Portrait (576px - 767px) */
+@media screen and (max-width: 767px) {
+
+  /* Container */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Headings */
+  .theme-doc-markdown h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom-width: 2px;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    border-left-width: 3px;
+  }
+
+  .theme-doc-markdown h4 {
+    font-size: 1.05rem;
+  }
+
+  /* Paragraphs */
+  .theme-doc-markdown p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  /* Lists */
+  .theme-doc-markdown ul li,
+  .theme-doc-markdown ol li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .theme-doc-markdown ul li::before {
+    font-size: 1rem;
+  }
+
+  /* Code */
+  code {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  /* Tables - Horizontal scroll */
+  .theme-doc-markdown table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.6rem;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0 12px 12px 0;
+  }
+
+  /* Forms */
+  form {
+    padding: 1.5rem;
+    margin: 15px 1rem;
+    border-radius: 16px;
+    max-width: none;
+  }
+
+  form input[type="email"],
+  form input[type="password"],
+  form input[type="text"],
+  form select {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  form button[type="submit"] {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer.footer {
+    padding: 2rem 1rem !important;
+  }
+
+  /* Pagination - Stack on mobile */
+  .pagination-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pagination-nav__link {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Auth buttons */
+  .AuthButton-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .AuthButton-container a,
+  .AuthButton-container button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
+
+  /* Content buttons */
+  .ContentWrapper-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ContentWrapper-buttons button {
+    width: 100%;
+  }
+}
+
+/* Mobile Large (480px - 575px) */
+@media screen and (max-width: 575px) {
+
+  /* Headings */
+  .theme-doc-markdown h1 {
+    font-size: 1.7rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.35rem;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.15rem;
+  }
+
+  /* Body text */
+  .theme-doc-markdown p {
+    font-size: 0.9rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar__title {
+    font-size: 1.1rem;
+  }
+
+  /* TOC hide on small screens */
+  .table-of-contents {
+    display: none;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+
+  /* Headings */
+  .theme-doc-markdown h1 {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.25rem;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.1rem;
+    padding-left: 0.4rem;
+  }
+
+  .theme-doc-markdown h4 {
+    font-size: 1rem;
+  }
+
+  /* Body */
+  .theme-doc-markdown p {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  /* Lists */
+  .theme-doc-markdown ul li,
+  .theme-doc-markdown ol li {
+    font-size: 0.875rem;
+    padding-left: 1.25rem;
+  }
+
+  /* Code blocks */
+  .theme-code-block {
+    border-radius: 8px !important;
+    font-size: 0.8rem;
+  }
+
+  code {
+    font-size: 0.8rem;
+  }
+
+  /* Tables */
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Forms */
+  form {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  form input[type="email"],
+  form input[type="password"],
+  form input[type="text"],
+  form select {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  form button[type="submit"] {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  /* Navbar */
+  .navbar__title {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer.footer--dark .footer__title {
+    font-size: 1rem;
+  }
+
+  footer.footer--dark .footer__link-item {
+    font-size: 0.875rem;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media screen and (max-width: 319px) {
+  .theme-doc-markdown h1 {
+    font-size: 1.3rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.15rem;
+  }
+
+  .theme-doc-markdown p {
+    font-size: 0.8rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+
+  .navbar,
+  .menu,
+  .pagination-nav,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  .theme-doc-markdown h1,
+  .theme-doc-markdown h2,
+  .theme-doc-markdown h3 {
+    color: #1e1b4b !important;
+    -webkit-text-fill-color: #1e1b4b !important;
+  }
+}
+
+/* ========== TOUCH DEVICE OPTIMIZATIONS ========== */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Larger touch targets */
+  .menu__link {
+    padding: 14px 16px;
+    min-height: 48px;
+  }
+
+  .navbar__link {
+    padding: 12px 16px;
+  }
+
+  form button[type="submit"] {
+    min-height: 48px;
+  }
+
+  .pagination-nav__link {
+    min-height: 60px;
+  }
+
+  /* Remove hover effects that don't work on touch */
+  .menu__link:hover,
+  .pagination-nav__link:hover {
+    transform: none;
+  }
+}
+
+/* ========== MOBILE NAVBAR/SIDEBAR FIX ========== */
+/*
+ * PROBLEM: Sidebar appears behind hero/content because they create stacking contexts.
+ * SOLUTION: Break all stacking contexts in content, only sidebar gets z-index.
+ */
+
+/* STEP 1: Remove z-index from ALL content elements - INCLUDING DOCS PAGES */
+#__docusaurus,
+.main-wrapper,
+.docPage,
+.docsWrapper,
+.docMainContainer,
+.docRoot,
+.container,
+main,
+article,
+.hero,
+[class*="heroBanner"],
+[class*="hero"],
+[class*="Hero"],
+.theme-doc-sidebar-container,
+.theme-doc-markdown,
+[class*="doc"],
+[class*="Doc"],
+[class*="theme-doc"] {
+  z-index: auto !important;
+}
+
+/* STEP 2: Force navbar-sidebar to be on top with MAXIMUM z-index */
+.navbar-sidebar {
+  z-index: 9999999 !important;
+  /* Only override z-index - let Docusaurus handle everything else */
+}
+
+.navbar-sidebar__backdrop {
+  z-index: 9999998 !important;
+}
+
+/* STEP 3: Navbar must also be high but below sidebar */
+.navbar {
+  position: sticky !important;
+  z-index: 1000 !important;
+}
+
+/* STEP 4: Remove overflow:hidden that clips fixed elements */
+@media screen and (max-width: 996px) {
+
+  /* Force ALL parent containers to allow sidebar - INCLUDING DOCS */
+  body,
+  html,
+  #__docusaurus,
+  .main-wrapper,
+  main,
+  .docPage,
+  .docsWrapper,
+  .docMainContainer,
+  .docRoot,
+  [class*="wrapper"],
+  [class*="container"],
+  [class*="layout"],
+  [class*="doc"],
+  [class*="Doc"] {
+    overflow-x: clip !important;
+    overflow-y: auto !important;
+    /* Use clip for horizontal - doesn't create stacking context */
+    z-index: auto !important;
+  }
+
+  /* CRITICAL: Force ALL content sections to not trap/clip fixed elements - INCLUDING DOCS */
+  .hero,
+  .heroBanner,
+  [class*="heroBanner"],
+  [class*="Hero"],
+  .mainContent,
+  [class*="mainContent"],
+  [class*="Main"],
+  [class*="content"],
+  [class*="section"],
+  [class*="Section"],
+  .theme-doc-sidebar-container,
+  .theme-doc-markdown,
+  [class*="theme-doc"],
+  [class*="doc"],
+  [class*="Doc"],
+  main,
+  .main-wrapper,
+  article,
+  section {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    contain: none !important;
+    z-index: auto !important;
+  }
+}
+
+/* ========== SIDEBAR STYLING ========== */
+.navbar-sidebar__brand {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-sidebar__brand .navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-sidebar__brand .navbar__title {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.navbar-sidebar__items {
+  padding: 0.5rem 0;
+}
+
+.navbar-sidebar .menu {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-sidebar .menu__list {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-sidebar .menu__list-item {
+  margin: 0;
+}
+
+.navbar-sidebar .menu__link {
+  display: block;
+  padding: 12px 16px;
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.navbar-sidebar .menu__link:hover {
+  background: rgba(124, 58, 237, 0.1);
+  color: #7c3aed;
+}
+
+.navbar-sidebar .menu__link--active {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Close button styling */
+.navbar-sidebar__back,
+.navbar-sidebar__close {
+  padding: 8px 16px;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-sidebar__back:hover,
+.navbar-sidebar__close:hover {
+  color: #374151;
+}
+
+/* Hamburger menu button */
+.navbar__toggle {
+  color: #ffffff;
+  padding: 8px;
+  margin-right: 8px;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+/* Tablet and below */
+@media screen and (max-width: 996px) {
+  .navbar-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+  .navbar-sidebar {
+    width: 85vw !important;
+    max-width: 300px !important;
+    z-index: 9999999 !important;
+  }
+
+  .navbar-sidebar .menu__link {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ========== LOGIN BUTTON - LIGHT BLUE ========== */
+.button--primary {
+  background: linear-gradient(135deg, #7dd3fc, #38bdf8) !important;
+  border: none !important;
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa) !important;
+  color: #0f172a !important;
+  transform: translateY(-2px);
+}

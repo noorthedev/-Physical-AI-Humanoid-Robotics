@@ -1,0 +1,17 @@
+{
+  "id": "humanoid-robotics/index",
+  "title": "Humanoid Robotics",
+  "description": "The Grand Challenge of Humanoid Robotics",
+  "source": "@site/docs/humanoid-robotics/index.md",
+  "sourceDirName": "humanoid-robotics",
+  "slug": "/humanoid-robotics/",
+  "permalink": "/docs/humanoid-robotics/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Syedabanog-1/Hackathon1/tree/main/docs/humanoid-robotics/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Humanoid Robotics"
+  }
+}

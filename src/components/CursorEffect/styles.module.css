@@ -1,0 +1,138 @@
+/* Custom Animated Cursor Styles - Unique Difference Mode */
+
+/* Hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
+    cursor: none !important;
+  }
+}
+
+/* Main cursor ring - follows with delay */
+.cursorRing {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px dashed #ffffff;
+  /* White for difference mode */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  background: transparent;
+  mix-blend-mode: difference;
+  /* The key effect */
+  animation: rotateRing 10s linear infinite;
+}
+
+@keyframes rotateRing {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Glow effect inside the ring - subtle */
+.cursorGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  animation: cursorPulse 2s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* Center dot - follows immediately */
+.cursorDot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+/* Hover state - when over links/buttons */
+.cursorRing.hovering {
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  /* Solid when hovering */
+  border-width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: none;
+  /* Stop rotation on hover for stability */
+}
+
+.cursorRing.hovering .cursorGlow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  animation: hoverPulse 1s ease-in-out infinite;
+}
+
+@keyframes hoverPulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Click state */
+.cursorRing.clicking {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.cursorDot.clicking {
+  width: 12px;
+  height: 12px;
+}
+
+/* Hide on mobile */
+@media (hover: none) or (pointer: coarse) {
+
+  .cursorRing,
+  .cursorDot {
+    display: none !important;
+  }
+}

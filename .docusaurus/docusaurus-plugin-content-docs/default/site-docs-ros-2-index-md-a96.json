@@ -1,0 +1,17 @@
+{
+  "id": "ros2/index",
+  "title": "ROS 2 (Robot Operating System)",
+  "description": "Introduction to ROS 2",
+  "source": "@site/docs/ros2/index.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/",
+  "permalink": "/docs/ros2/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Syedabanog-1/Hackathon1/tree/main/docs/ros2/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "ROS 2 (Robot Operating System)"
+  }
+}

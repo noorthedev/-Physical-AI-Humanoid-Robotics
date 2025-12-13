@@ -1,0 +1,26 @@
+{
+  "id": "hardware/lab-infrastructure",
+  "title": "Lab Infrastructure",
+  "description": "In addition to the robot itself, you will need a well-equipped lab space to support your robotics development.",
+  "source": "@site/docs/hardware/lab-infrastructure.md",
+  "sourceDirName": "hardware",
+  "slug": "/hardware/lab-infrastructure",
+  "permalink": "/docs/hardware/lab-infrastructure",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Syedabanog-1/Hackathon1/tree/main/docs/hardware/lab-infrastructure.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lab Infrastructure"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sensors and Actuators",
+    "permalink": "/docs/hardware/sensors-actuators"
+  },
+  "next": {
+    "title": "Conclusion",
+    "permalink": "/docs/hardware/conclusion/"
+  }
+}
