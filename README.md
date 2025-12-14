@@ -201,13 +201,10 @@ Ensure `url`, `baseUrl`, `organizationName`, and `projectName` are correctly con
 * Demo video (≤ 90 seconds)
 * WhatsApp contact number
 
----
 
 ## License
 
 MIT License
-
----
 
 ## Maintainer
 
