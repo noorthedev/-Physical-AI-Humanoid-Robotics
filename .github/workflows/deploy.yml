@@ -32,7 +32,7 @@ jobs:
       - name: Build website
         run: npm run build
         env:
-          URL: https://samade747.github.io
+          URL: https://noorthedev.github.io
           BASE_URL: /full-project/
 
       - name: Deploy to GitHub Pages

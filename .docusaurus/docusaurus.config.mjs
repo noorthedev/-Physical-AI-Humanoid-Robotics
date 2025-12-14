@@ -64,7 +64,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/Syedabanog-1/Hackathon1/tree/main/"
+          "editUrl": "https://github.com/banog-1/Hackathon1/tree/main/"
         },
         "blog": false,
         "theme": {
